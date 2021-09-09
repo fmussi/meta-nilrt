@@ -41,7 +41,7 @@ GIT_KERNEL_REPO = "linux.git"
 #	file://export-kernel-headers.sh \
 #"
 SRC_URI = "\
-	git://github.com/fmussi/linux.git;protocol=git;nocheckout=1;branch=dev/fmussi/docker \
+	git://github.com/fmussi/linux.git;protocol=git;nocheckout=1;branch=dev/fmussi/docke \
 	file://export-kernel-headers.sh \
 "
 SRCREV="27f65d4c995a5a41ccb6940c9ed2a7e64616a52e"
