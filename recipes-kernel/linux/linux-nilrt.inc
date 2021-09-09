@@ -36,8 +36,12 @@ LINUX_VERSION = "4.14"
 KBRANCH = "nilrt/${NI_RELEASE_VERSION}/${LINUX_VERSION}"
 
 GIT_KERNEL_REPO = "linux.git"
+#SRC_URI = "\
+#	${NILRT_GIT}/${GIT_KERNEL_REPO};protocol=git;nocheckout=1;branch=${KBRANCH} \
+#	file://export-kernel-headers.sh \
+#"
 SRC_URI = "\
-	${NILRT_GIT}/${GIT_KERNEL_REPO};protocol=git;nocheckout=1;branch=${KBRANCH} \
+	git://github.com/fmussi/linux.git;protocol=git;nocheckout=1;branch=dev/fmussi/docker \
 	file://export-kernel-headers.sh \
 "
 SRCREV="27f65d4c995a5a41ccb6940c9ed2a7e64616a52e"
