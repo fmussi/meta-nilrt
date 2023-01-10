@@ -37,8 +37,15 @@ INHIBIT_PACKAGE_DEBUG_SPLIT="1"
 # link against the gcc provided runtime
 do_kernel_configme[depends] += "libgcc:do_populate_sysroot"
 
+# Original src
+#SRC_URI = "\
+#	${NILRT_GIT}/${GIT_KERNEL_REPO};protocol=https;nocheckout=1;branch=${KBRANCH} \
+#	file://export-kernel-headers.sh \
+#"
+
+# Modify
 SRC_URI = "\
-	${NILRT_GIT}/${GIT_KERNEL_REPO};protocol=https;nocheckout=1;branch=${KBRANCH} \
+	git://github.com/fmussi/linux.git;protocol=https;nocheckout=1;branch=nilrt/22.8/5.15/Docker \
 	file://export-kernel-headers.sh \
 "
 # Generically use the *latest* rev from the kernel source branch, if none is
