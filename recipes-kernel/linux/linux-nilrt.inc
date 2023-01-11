@@ -45,7 +45,7 @@ do_kernel_configme[depends] += "libgcc:do_populate_sysroot"
 
 # Modify
 SRC_URI = "\
-	https://github.com/fmussi/linux.git;protocol=https;nocheckout=1;branch=dev/22.8/5.15/docker \
+	git://github.com/fmussi/linux.git;protocol=https;nocheckout=1;branch=dev/22.8/5.15/docker \
 	file://export-kernel-headers.sh \
 "
 # Generically use the *latest* rev from the kernel source branch, if none is
